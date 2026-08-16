@@ -1,0 +1,50 @@
+generated: '2026-08-16'
+method: probed
+source: https://fjdeertech.com/
+host: https://fjdeertech.com
+note: >-
+  Every /.well-known/ path probed on the company's corporate domain returned a real
+  HTTP 404 from the origin (an IIS/ASP brochure site, not a single-page-app catch-all
+  — the 404s carry status 404 with a 1571-byte error page, so these are true
+  absences and not soft-200 false positives). No WellKnown or SecurityTxt pointer is
+  emitted in apis.yml because no path returned a document. Fujian Deer Technology is
+  a fluorochemicals manufacturer with no developer program; api., developer. and
+  docs.fjdeertech.com do not resolve in DNS.
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+- path: /.well-known/oauth-authorization-server
+  status: 404
+- path: /.well-known/api-catalog
+  status: 404
+- path: /.well-known/ai-plugin.json
+  status: 404
+- path: /.well-known/agent-card.json
+  status: 404
+- path: /.well-known/agent.json
+  status: 404
+additional_probes:
+- url: https://fjdeertech.com/robots.txt
+  status: 200
+  note: served; disallows /da, /in and *.asp — no sitemap directive
+- url: https://fjdeertech.com/sitemap.xml
+  status: 404
+- url: https://fjdeertech.com/llms.txt
+  status: 404
+- url: https://fjdeertech.com/openapi.json
+  status: 404
+- url: https://fjdeertech.com/swagger.json
+  status: 404
+- url: https://fjdeertech.com/api-docs
+  status: 404
+- url: https://api.fjdeertech.com/
+  status: 0
+  note: DNS does not resolve
+- url: https://developer.fjdeertech.com/
+  status: 0
+  note: DNS does not resolve
+- url: https://docs.fjdeertech.com/
+  status: 0
+  note: DNS does not resolve

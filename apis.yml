@@ -1,8 +1,21 @@
 aid: fujian-deer-technology
 name: Fujian Deer Technology
-description: 'Fujian Deer Technology is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Fujian Deer Technology (福建德尔科技股份有限公司) is a Chinese specialty-chemicals
+  manufacturer founded in June 2014 and headquartered in the Jiaoyang Industrial Concentration
+  Zone, Shanghang County, Longyan City, Fujian Province. The company pursues a full
+  fluorine-chemistry industry-chain strategy, researching, producing and selling basic
+  chemical materials, fluorine-containing electronic gases, high-purity semiconductor
+  wet electronic chemicals, new-energy (lithium battery) materials and other fluorinated
+  advanced materials. Its electronic-grade gases include trifluoromethane, carbon tetrafluoride,
+  sulfur hexafluoride, hexafluoroethane, chlorine trifluoride and octafluorocyclobutane,
+  supplied into semiconductor chips, LED chips, flat-panel displays, communications
+  optical fibre, power and energy-storage batteries, ultra-high-voltage transmission
+  and transformation, and photovoltaic power generation. It is a designated national
+  high-tech enterprise and is privately held; its shares appear on secondary-market
+  venues. It manufactures physical materials and publishes no public API, developer
+  program or machine-readable interface.'
 url: https://raw.githubusercontent.com/api-evangelist/fujian-deer-technology/refs/heads/main/apis.yml
+image: https://fjdeertech.com/public/upfileimg/image/20230602/20230602161894089408.jpg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +25,14 @@ created: '2026-08-16'
 modified: '2026-08-16'
 tags:
 - Company
+- Chemicals
+- Advanced Materials
+- Semiconductors
+- Electronic Gases
+- New Energy Materials
+- Fluorochemicals
+- Manufacturing
+- China
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,48 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/fujian-deer-technology-domain-security.yml
 - type: Website
+  url: https://fjdeertech.com/
+- type: About
+  url: https://fjdeertech.com/text_10.html
+- type: Products
+  url: https://fjdeertech.com/pic_3.html
+- type: News
+  url: https://fjdeertech.com/news_15.html
+- type: Careers
+  url: https://fjdeertech.com/text_8.html
+- type: Contact
+  url: https://fjdeertech.com/text_9.html
+- type: SecondaryMarketListing
   url: https://www.hiive.com/securities/fujian-deer-technology-stock
+- type: LinkedIn
+  url: https://www.linkedin.com/company/%E7%A6%8F%E5%BB%BA%E5%BE%B7%E5%B0%94%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/fujian-deer-technology
+x-enrichment:
+  date: '2026-08-16'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Fujian Deer Technology manufactures fluorine-based electronic gases and high-purity
+    semiconductor wet chemicals as physical products; its only web presence is a static
+    ASP brochure site at fjdeertech.com with six nav pages (about, products, news,
+    careers, contact) and no developer, API or documentation section anywhere on it.
+  evidence:
+  - url: https://fjdeertech.com/
+    status: 200
+  - url: https://fjdeertech.com/openapi.json
+    status: 404
+  - url: https://fjdeertech.com/.well-known/agent-card.json
+    status: 404
+  - url: https://fjdeertech.com/llms.txt
+    status: 404
+  - url: https://api.fjdeertech.com/
+    status: 0
+  checked: '2026-08-16'
